@@ -1,0 +1,73 @@
+{
+  "experiment_name": "baseline_roberta",
+  "start_time": "2025-10-19 17:46:43",
+  "metrics": [
+    {
+      "timestamp": 0.0009646415710449219,
+      "step": null,
+      "metrics": {
+        "model_config": {
+          "model": {
+            "name": "roberta-base",
+            "num_labels": 3,
+            "max_length": 512
+          },
+          "lora": {
+            "r": 16,
+            "lora_alpha": 32,
+            "lora_dropout": 0.1,
+            "target_modules": [
+              "query",
+              "value",
+              "key",
+              "dense"
+            ],
+            "bias": "none",
+            "task_type": "SEQ_CLS"
+          }
+        },
+        "training_config": {
+          "training": {
+            "batch_size": 16,
+            "learning_rate": "2e-5",
+            "num_epochs": 3,
+            "warmup_steps": 500,
+            "weight_decay": 0.01,
+            "gradient_accumulation_steps": 1,
+            "max_grad_norm": 1.0,
+            "save_steps": 1000,
+            "eval_steps": 500,
+            "logging_steps": 100
+          },
+          "data": {
+            "domains": [
+              "amazon",
+              "restaurants",
+              "movies"
+            ],
+            "train_size_per_domain": 100,
+            "val_size_per_domain": 20,
+            "test_size_per_domain": 20,
+            "random_seed": 42
+          },
+          "experiment": {
+            "output_dir": "./results",
+            "run_name": "sentiment_peft_experiment",
+            "project_name": "sentiment-analysis",
+            "use_wandb": false,
+            "device": "auto"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": 30.601170301437378,
+      "step": null,
+      "metrics": {
+        "model_total_params": 124647939,
+        "model_trainable_params": 124647939,
+        "model_trainable_percent": 100.0
+      }
+    }
+  ]
+}

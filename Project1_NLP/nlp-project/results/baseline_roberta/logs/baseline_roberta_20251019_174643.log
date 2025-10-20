@@ -1,0 +1,55 @@
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO - Starting baseline experiment: baseline_roberta
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO - Model: roberta-base
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO - Domains: ['amazon', 'restaurants', 'movies']
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO - 
+============================================================
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO - Training Configuration
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO - ============================================================
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO - training:
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO -   batch_size: 16
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO -   learning_rate: 2e-5
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO -   num_epochs: 3
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO -   warmup_steps: 500
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO -   weight_decay: 0.01
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO -   gradient_accumulation_steps: 1
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO -   max_grad_norm: 1.0
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO -   save_steps: 1000
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO -   eval_steps: 500
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO -   logging_steps: 100
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO - data:
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO -   domains: ['amazon', 'restaurants', 'movies']
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO -   train_size_per_domain: 100
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO -   val_size_per_domain: 20
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO -   test_size_per_domain: 20
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO -   random_seed: 42
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO - experiment:
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO -   output_dir: ./results
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO -   run_name: sentiment_peft_experiment
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO -   project_name: sentiment-analysis
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO -   use_wandb: False
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO -   device: auto
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO - ============================================================
+
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO - ============================================================
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO - DATA PREPARATION
+2025-10-19 17:46:43 - experiment_baseline_roberta - INFO - ============================================================
+2025-10-19 17:46:56 - experiment_baseline_roberta - INFO - ✅ Datasets created successfully!
+2025-10-19 17:46:56 - experiment_baseline_roberta - INFO - Data loaded - Train: 200, Val: 40, Test: 40
+2025-10-19 17:46:56 - experiment_baseline_roberta - INFO - ============================================================
+2025-10-19 17:46:56 - experiment_baseline_roberta - INFO - MODEL INITIALIZATION
+2025-10-19 17:46:56 - experiment_baseline_roberta - INFO - ============================================================
+2025-10-19 17:47:14 - experiment_baseline_roberta - INFO - 
+============================================================
+2025-10-19 17:47:14 - experiment_baseline_roberta - INFO - Baseline Model Information
+2025-10-19 17:47:14 - experiment_baseline_roberta - INFO - ============================================================
+2025-10-19 17:47:14 - experiment_baseline_roberta - INFO - Total Parameters:      124,647,939 (124.6M)
+2025-10-19 17:47:14 - experiment_baseline_roberta - INFO - Trainable Parameters:  124,647,939 (124.65M)
+2025-10-19 17:47:14 - experiment_baseline_roberta - INFO - Frozen Parameters:     0 (0.0M)
+2025-10-19 17:47:14 - experiment_baseline_roberta - INFO - Trainable Percentage:  100.00%
+2025-10-19 17:47:14 - experiment_baseline_roberta - INFO - Model Size:            475.5 MB
+2025-10-19 17:47:14 - experiment_baseline_roberta - INFO - ============================================================
+
+2025-10-19 17:47:14 - experiment_baseline_roberta - INFO - ============================================================
+2025-10-19 17:47:14 - experiment_baseline_roberta - INFO - TRAINING
+2025-10-19 17:47:14 - experiment_baseline_roberta - INFO - ============================================================
+2025-10-19 17:47:14 - experiment_baseline_roberta - INFO - Using device: cpu

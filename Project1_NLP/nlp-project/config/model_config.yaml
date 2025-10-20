@@ -1,0 +1,12 @@
+model:
+  name: "roberta-base"
+  num_labels: 3  #negative, neutral, positive
+  max_length: 512
+
+lora:
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.1
+  target_modules: ["query", "value", "key", "dense"]
+  bias: "none"
+  task_type: "SEQ_CLS"

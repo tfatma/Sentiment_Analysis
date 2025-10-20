@@ -1,0 +1,29 @@
+training:
+  batch_size: 16
+  learning_rate: 2e-5
+  num_epochs: 3
+  warmup_steps: 500
+  weight_decay: 0.01
+  gradient_accumulation_steps: 1
+  max_grad_norm: 1.0
+  save_steps: 1000
+  eval_steps: 500
+  logging_steps: 100
+
+data:
+  domains: ["amazon", "restaurants", "movies"]  # All working datasets!
+  train_size_per_domain: 100  # Start small for testing
+  val_size_per_domain: 20
+  test_size_per_domain: 20
+  random_seed: 42
+
+experiment:
+  output_dir: "./results"
+  run_name: "sentiment_peft_experiment"
+  project_name: "sentiment-analysis"
+  use_wandb: false
+  device: "auto"
+
+
+
+
